@@ -1,0 +1,140 @@
+
+//homework2
+
+public class Main
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Student Grades:");
+		int[] studentPercentage = {70,90,30,90,80,84,69,92,63,45};
+	    char[] letterGrades = new char[10];
+	    
+	  
+	    for (int i=0; i<studentPercentage.length;i++){
+	        letterGrades[i]=grade(studentPercentage[i]);
+	    }
+	    
+	    int c=1;
+	    for(char a: letterGrades){
+	        System.out.println("Student"+c+": "+a);
+	        c++;
+	    }
+	}
+
+	
+	public static char  grade(int x){
+         if (x>=90) {
+            return('A');
+        } 
+        else if (x>=80 && x<90) {
+            return('B');
+        }
+        else if (x>=70 && x<80) {
+            return('C');
+        }
+        else if (x>=60 && x<70) {
+            return('D');
+        }
+        else {
+            return('F');
+        }
+     }
+}
+
+
+==================================================================================================
+
+//homework2 bonus1 using while loop
+
+public class Main
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Student Grades:");
+		int[] studentPercentage = {70,90,30,90,80,84,69,92,63,45};
+	    char[] letterGrades = new char[10];
+	    
+	    int i=0;
+	  
+	    while (i<studentPercentage.length){
+	        letterGrades[i]=grade(studentPercentage[i]);
+	        i++;
+	    }
+	    
+	    int c=1;
+	    for(char a: letterGrades){
+	        System.out.println("Student"+c+": "+a);
+	        c++;
+	    }
+	}
+
+	
+	public static char  grade(int x){
+         if (x>=90) {
+            return('A');
+        } 
+        else if (x>=80 && x<90) {
+            return('B');
+        }
+        else if (x>=70 && x<80) {
+            return('C');
+        }
+        else if (x>=60 && x<70) {
+            return('D');
+        }
+        else {
+            return('F');
+        }
+	}
+}
+
+==========================================================================================================
+
+//homework2 bonus2 using for each
+public class Main
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Student Grades:");
+		int[] studentPercentage = {70,90,30,90,80,84,69,92,63,45};
+	    char[] letterGrades = new char[10];
+	    
+	    
+	    int f=0;
+	    while (f<letterGrades.length){
+	        for (int p: studentPercentage){
+	            letterGrades[f]=grade(p);
+	           f++; 
+	        }
+	    }
+	    
+	    int c=1;
+	    for(char a: letterGrades){
+	        System.out.println("Student"+c+": "+a);
+	        c++;
+	    }
+	}
+
+	
+	public static char  grade(int x){
+         if (x>=90) {
+            return('A');
+        } 
+        else if (x>=80 && x<90) {
+            return('B');
+        }
+        else if (x>=70 && x<80) {
+            return('C');
+        }
+        else if (x>=60 && x<70) {
+            return('D');
+        }
+        else {
+            return('F');
+        }
+	}
+}
+
+
+
+
